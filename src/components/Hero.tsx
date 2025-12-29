@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Moon from "./landmarks/Moon";
 
 interface HeroProps {
@@ -29,10 +29,7 @@ export default function Hero({ onOpenStreamer }: HeroProps) {
                 {/* Moon Outline Overlay */}
                 <Moon className="absolute inset-0 w-full h-full text-foam drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" />
 
-                {/* Play Button Hint */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <Play className="w-16 h-16 text-foam opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                {/* Play Button Hint Removed */}
             </div>
 
             <div className="z-10 text-center space-y-6 max-w-4xl mt-32 md:mt-0 pointer-events-none">

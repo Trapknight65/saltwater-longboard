@@ -16,29 +16,18 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // If more than 10% of Hero is visible, we consider we are "in Hero" for menu purposes
-        // Actually, user said: "display after leaving the hero section".
-        // So if Hero is NOT intersecting, we are NOT in hero.
-        // Let's invert: if entry.isIntersecting is false, we are past hero.
-        // Wait, "display after leaving" means the "mobile menu handle" displays after leaving.
-        // And bubbles display "only on hero view".
-        // So:
-        // isIntersecting = true -> inHero = true -> Bubbles
-        // isIntersecting = false -> inHero = false -> Handle/Dock
-        setInHero(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
+    const handleScroll = () => {
+      // "as soon as the user starts scrolling the bubbles translate"
+      // We'll use a small threshold to avoid jitter, e.g., 50px
+      if (window.scrollY > 50) {
+        setInHero(false);
+      } else {
+        setInHero(true);
+      }
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
