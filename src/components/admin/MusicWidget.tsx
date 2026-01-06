@@ -105,13 +105,13 @@ export default function MusicWidget() {
                         placeholder="Title (e.g., 'Saltwater Dreams')"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <div className="grid grid-cols-2 gap-2">
                         <select
                             value={type}
                             onChange={(e) => setType(e.target.value as 'Single' | 'EP' | 'Album')}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         >
                             <option value="Single">Single</option>
                             <option value="EP">EP</option>
@@ -120,7 +120,7 @@ export default function MusicWidget() {
                         <select
                             value={status}
                             onChange={(e) => setStatus(e.target.value as 'active' | 'upcoming' | 'future')}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         >
                             <option value="active">Active (Out Now)</option>
                             <option value="upcoming">Upcoming</option>
@@ -132,7 +132,7 @@ export default function MusicWidget() {
                         placeholder="Date label (e.g., 'Out Now', 'Late 2025')"
                         value={dateLabel}
                         onChange={(e) => setDateLabel(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <div className="flex gap-2">
                         <button
@@ -201,4 +201,5 @@ export default function MusicWidget() {
         </div>
     );
 }
+
 

@@ -105,7 +105,7 @@ export default function MerchWidget() {
                         placeholder="Product name (e.g., 'Tour Tee 2025')"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <div className="grid grid-cols-2 gap-2">
                         <input
@@ -113,14 +113,14 @@ export default function MerchWidget() {
                             placeholder="Price (e.g., '$35')"
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         />
                         <input
                             type="text"
                             placeholder="Tag (optional, e.g., 'New Drop')"
                             value={tag}
                             onChange={(e) => setTag(e.target.value)}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         />
                     </div>
                     <div>
@@ -200,4 +200,5 @@ export default function MerchWidget() {
         </div>
     );
 }
+
 

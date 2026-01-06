@@ -111,12 +111,12 @@ export default function TourWidget() {
                             placeholder="Date (e.g., 'May 15')"
                             value={dateLabel}
                             onChange={(e) => setDateLabel(e.target.value)}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         />
                         <select
                             value={status}
                             onChange={(e) => setStatus(e.target.value as 'Available' | 'Selling Fast' | 'Sold Out')}
-                            className="px-3 py-2 border rounded-lg text-sm"
+                            className="px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                         >
                             <option value="Available">Available</option>
                             <option value="Selling Fast">Selling Fast</option>
@@ -128,21 +128,21 @@ export default function TourWidget() {
                         placeholder="Venue (e.g., 'Red Rocks')"
                         value={venue}
                         onChange={(e) => setVenue(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <input
                         type="text"
                         placeholder="Location (e.g., 'Morrison, CO')"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <input
                         type="url"
                         placeholder="Ticket link (optional)"
                         value={ticketLink}
                         onChange={(e) => setTicketLink(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                        className="w-full px-3 py-2 bg-white border border-stone-300 rounded-lg text-sm text-stone-800 placeholder:text-stone-400"
                     />
                     <div className="flex gap-2">
                         <button
@@ -210,4 +210,5 @@ export default function TourWidget() {
         </div>
     );
 }
+
 
