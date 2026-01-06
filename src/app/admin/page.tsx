@@ -6,6 +6,9 @@ import ChecklistWidget from '@/components/admin/ChecklistWidget';
 import CountdownWidget from '@/components/admin/CountdownWidget';
 import StatsWidget from '@/components/admin/StatsWidget';
 import CalendarWidget from '@/components/admin/CalendarWidget';
+import MusicWidget from '@/components/admin/MusicWidget';
+import MerchWidget from '@/components/admin/MerchWidget';
+import TourWidget from '@/components/admin/TourWidget';
 
 export default function AdminDashboard() {
     const { user, loading } = useAuth();
@@ -28,7 +31,19 @@ export default function AdminDashboard() {
                     <p className="text-stone-500">Logged in as {user.email}</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                {/* Website Content Management */}
+                <h2 className="text-2xl font-bold text-stone-700 mb-4 mt-8">📡 Website Content</h2>
+                <p className="text-stone-500 mb-4 text-sm">Manage what visitors see on your public website.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <MusicWidget />
+                    <MerchWidget />
+                    <TourWidget />
+                </div>
+
+                {/* Internal Dashboard Tools */}
+                <h2 className="text-2xl font-bold text-stone-700 mb-4 mt-12">🛠️ Internal Tools</h2>
+                <p className="text-stone-500 mb-4 text-sm">Personal dashboard widgets for tracking releases, stats, and events.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <ChecklistWidget />
                     <CountdownWidget />
                     <StatsWidget />
@@ -38,3 +53,4 @@ export default function AdminDashboard() {
         </div>
     );
 }
+
