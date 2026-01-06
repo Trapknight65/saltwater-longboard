@@ -41,19 +41,19 @@ export default function CountdownWidget() {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="Release Title"
-                    className="p-2 border border-stone-300 rounded text-sm w-full"
+                    className="p-2 bg-white border border-stone-300 rounded text-sm w-full text-stone-800 placeholder:text-stone-400"
                 />
                 <div className="flex gap-2">
                     <input
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
-                        className="p-2 border border-stone-300 rounded text-sm flex-1"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm flex-1 text-stone-800"
                     />
                     <select
                         value={type}
                         onChange={(e) => setType(e.target.value as any)}
-                        className="p-2 border border-stone-300 rounded text-sm"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm text-stone-800"
                     >
                         <option value="Single">Single</option>
                         <option value="EP">EP</option>

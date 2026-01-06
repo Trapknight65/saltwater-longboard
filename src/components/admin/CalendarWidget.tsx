@@ -46,14 +46,14 @@ export default function CalendarWidget() {
                         value={venue}
                         onChange={(e) => setVenue(e.target.value)}
                         placeholder="Venue"
-                        className="p-2 border border-stone-300 rounded text-sm flex-1"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm flex-1 text-stone-800 placeholder:text-stone-400"
                     />
                     <input
                         type="text"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
                         placeholder="City/State"
-                        className="p-2 border border-stone-300 rounded text-sm flex-1"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm flex-1 text-stone-800 placeholder:text-stone-400"
                     />
                 </div>
                 <div className="flex gap-2">
@@ -61,14 +61,14 @@ export default function CalendarWidget() {
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
-                        className="p-2 border border-stone-300 rounded text-sm flex-1"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm flex-1 text-stone-800"
                     />
                     <input
                         type="text"
                         value={ticketLink}
                         onChange={(e) => setTicketLink(e.target.value)}
                         placeholder="Ticket Link (Optional)"
-                        className="p-2 border border-stone-300 rounded text-sm flex-1"
+                        className="p-2 bg-white border border-stone-300 rounded text-sm flex-1 text-stone-800 placeholder:text-stone-400"
                     />
                 </div>
 

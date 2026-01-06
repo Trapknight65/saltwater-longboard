@@ -33,7 +33,7 @@ export default function ChecklistWidget() {
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
                     placeholder="New task..."
-                    className="flex-1 p-2 border border-stone-300 rounded focus:outline-none focus:ring-1 focus:ring-pacific text-sm"
+                    className="flex-1 p-2 bg-white border border-stone-300 rounded focus:outline-none focus:ring-1 focus:ring-pacific text-sm text-stone-800 placeholder:text-stone-400"
                 />
                 <button type="submit" className="p-2 bg-pacific text-white rounded hover:bg-tide">
                     <Plus size={18} />
