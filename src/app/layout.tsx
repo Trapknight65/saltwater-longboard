@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GrainOverlay from "@/components/layout/GrainOverlay";
 import AmbientSound from "@/components/layout/AmbientSound";
+import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GrainOverlay />
-        <AmbientSound />
-        {children}
+        <AuthProvider>
+          <GrainOverlay />
+          <AmbientSound />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
