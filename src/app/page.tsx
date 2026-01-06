@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Hero from "@/components/Hero";
 import MusicSection from "@/components/MusicSection";
 import MerchPreview from "@/components/MerchPreview";
+import MailingList from "@/components/MailingList";
 import Booking from "@/components/Booking";
 import GDPRConsent from "@/components/GDPRConsent";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -50,6 +51,7 @@ export default function Home() {
 
       <MusicSection />
       <MerchPreview />
+      <MailingList />
       <Booking />
       <GDPRConsent />
     </main>

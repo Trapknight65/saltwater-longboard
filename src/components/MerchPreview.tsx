@@ -9,6 +9,27 @@ export default function MerchPreview() {
         { name: "Tote Bag", price: "$20", tag: null, imageColor: "bg-dune" },
     ];
 
+    const handleCheckout = async (product: any) => {
+        try {
+            const response = await fetch("/api/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    items: [product]
+                }),
+            });
+            const data = await response.json();
+            if (data.url) {
+                window.location.href = data.url;
+            }
+        } catch (error) {
+            console.error("Checkout failed:", error);
+        }
+    };
+
+
     return (
         <section className="py-24 px-4 bg-white relative overflow-hidden" id="merch">
             {/* Blazing Surfboard Landmark */}
@@ -24,7 +45,7 @@ export default function MerchPreview() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {products.map((item, idx) => (
-                        <div key={idx} className="group cursor-pointer">
+                        <div key={idx} className="group cursor-pointer" onClick={() => handleCheckout(item)}>
                             <div className={`relative aspect-square ${item.imageColor} rounded-xl overflow-hidden mb-4 transition-transform group-hover:scale-[1.02]`}>
                                 {item.tag && (
                                     <span className="absolute top-4 left-4 bg-ember text-cliff text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
@@ -33,8 +54,11 @@ export default function MerchPreview() {
                                 )}
                                 <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
                             </div>
-                            <h3 className="text-xl font-bold text-cliff">{item.name}</h3>
-                            <p className="text-driftwood">{item.price}</p>
+                            <h3 className="text-xl font-bold text-cliff group-hover:text-pacific transition-colors">{item.name}</h3>
+                            <p className="text-driftwood flex items-center justify-between">
+                                {item.price}
+                                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold uppercase text-pacific">Buy Now</span>
+                            </p>
                         </div>
                     ))}
                 </div>

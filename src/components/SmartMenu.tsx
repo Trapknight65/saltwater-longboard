@@ -87,6 +87,19 @@ export default function SmartMenu({ onOpenStreamer, inHero }: SmartMenuProps) {
         <>
             {/* DESKTOP NAV: Floating Bubbles -> Vertical Dock */}
             {/* Hidden on mobile if NOT in hero (since mobile uses bottom handle then) */}
+            {/* Desktop Pre-Save CTA */}
+            <div className="fixed top-6 right-6 z-50 hidden md:block">
+                <a
+                    href="https://distrokid.com/hyperfollow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-ember text-cliff font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(227,100,20,0.4)] animate-pulse hover:animate-none"
+                >
+                    <Music className="w-5 h-5" />
+                    <span>Pre-Save on Spotify</span>
+                </a>
+            </div>
+
             <div className={`fixed inset-0 pointer-events-none z-40 hidden md:block`}>
                 {menuItems.map((item) => {
                     const Icon = item.icon;
@@ -262,6 +275,19 @@ export default function SmartMenu({ onOpenStreamer, inHero }: SmartMenuProps) {
                                     </button>
                                 );
                             })}
+                        </div>
+
+                        {/* Mobile Pre-Save CTA */}
+                        <div className="px-8 mt-2 relative z-10">
+                            <a
+                                href="https://distrokid.com/hyperfollow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-ember text-cliff font-bold rounded-xl hover:bg-white transition-all shadow-[0_0_20px_rgba(227,100,20,0.4)]"
+                            >
+                                <Music className="w-5 h-5" />
+                                <span>Pre-Save on Spotify</span>
+                            </a>
                         </div>
 
                         {/* Footer Section */}

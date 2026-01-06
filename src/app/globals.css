@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tide: #0E6F5A;
-  --color-pacific: #1EA7C4;
-  --color-dune: #E7D3A6;
-  --color-ember: #F4A230;
-  --color-palm: #4DAA4F;
+  --color-tide: #0F4C5C; /* Deep Atlantic */
+  --color-pacific: #1EA7C4; /* Keep as bright accent or adjust? Keeping for now */
+  --color-dune: #F0E6D2; /* Sand */
+  --color-ember: #E36414; /* Sunset Orange */
+  --color-palm: #4DAA4F; 
   --color-coral: #FF6D5A;
   --color-driftwood: #8A8275;
-  --color-cliff: #1A1C1A;
-  --color-foam: #F7F5EF;
+  --color-cliff: #0F4C5C; /* Using Deep Atlantic as the new dark base instead of pure black/gray */
+  --color-foam: #F7F5EF; /* Off-white foam */
 
   --animate-float: float 6s ease-in-out infinite;
 
