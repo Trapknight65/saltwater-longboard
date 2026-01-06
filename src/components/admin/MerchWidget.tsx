@@ -84,13 +84,13 @@ export default function MerchWidget() {
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-pacific-800 flex items-center gap-2">
+                <h2 className="text-xl font-bold text-tide flex items-center gap-2">
                     <ShoppingBag className="w-5 h-5" /> Merch Products
                 </h2>
                 {!isAdding && !editingId && (
                     <button
                         onClick={() => setIsAdding(true)}
-                        className="p-2 rounded-full bg-pacific-100 text-pacific-600 hover:bg-pacific-200 transition-colors"
+                        className="p-2 rounded-full bg-pacific/10 text-pacific hover:bg-pacific-200 transition-colors"
                     >
                         <Plus className="w-5 h-5" />
                     </button>
@@ -130,7 +130,7 @@ export default function MerchWidget() {
                                 <button
                                     key={color.value}
                                     onClick={() => setImageColor(color.value)}
-                                    className={`w-8 h-8 rounded-lg ${color.value} ${imageColor === color.value ? "ring-2 ring-offset-2 ring-pacific-600" : ""
+                                    className={`w-8 h-8 rounded-lg ${color.value} ${imageColor === color.value ? "ring-2 ring-offset-2 ring-pacific" : ""
                                         }`}
                                     title={color.label}
                                 />
@@ -140,7 +140,7 @@ export default function MerchWidget() {
                     <div className="flex gap-2">
                         <button
                             onClick={editingId ? handleUpdate : handleAdd}
-                            className="flex-1 py-2 bg-pacific-600 text-white rounded-lg text-sm font-medium hover:bg-pacific-700 flex items-center justify-center gap-1"
+                            className="flex-1 py-2 bg-pacific text-white rounded-lg text-sm font-medium hover:bg-tide flex items-center justify-center gap-1"
                         >
                             <Check className="w-4 h-4" />
                             {editingId ? "Update" : "Add Product"}
@@ -182,7 +182,7 @@ export default function MerchWidget() {
                             <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <button
                                     onClick={() => handleEdit(product)}
-                                    className="p-1.5 text-stone-400 hover:text-pacific-600 hover:bg-pacific-50 rounded"
+                                    className="p-1.5 text-stone-400 hover:text-pacific hover:bg-pacific/10 rounded"
                                 >
                                     <Edit2 className="w-4 h-4" />
                                 </button>
@@ -200,3 +200,4 @@ export default function MerchWidget() {
         </div>
     );
 }
+

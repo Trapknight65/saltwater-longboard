@@ -25,7 +25,7 @@ export default function ChecklistWidget() {
 
     return (
         <div className="border border-stone-200 p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-            <h2 className="text-2xl font-semibold mb-4 text-pacific-700 font-serif">Checklist</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-tide font-serif">Checklist</h2>
 
             <form onSubmit={handleAdd} className="flex gap-2 mb-4">
                 <input
@@ -33,9 +33,9 @@ export default function ChecklistWidget() {
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
                     placeholder="New task..."
-                    className="flex-1 p-2 border border-stone-300 rounded focus:outline-none focus:ring-1 focus:ring-pacific-500 text-sm"
+                    className="flex-1 p-2 border border-stone-300 rounded focus:outline-none focus:ring-1 focus:ring-pacific text-sm"
                 />
-                <button type="submit" className="p-2 bg-pacific-600 text-white rounded hover:bg-pacific-700">
+                <button type="submit" className="p-2 bg-pacific text-white rounded hover:bg-tide">
                     <Plus size={18} />
                 </button>
             </form>
@@ -44,8 +44,8 @@ export default function ChecklistWidget() {
                 {tasks.map((task) => (
                     <div key={task.id} className="flex items-center justify-between group p-2 hover:bg-stone-50 rounded">
                         <div className="flex items-center gap-3">
-                            <button onClick={() => toggleTask(task.id, !task.completed)} className="text-stone-400 hover:text-pacific-600">
-                                {task.completed ? <CheckCircle size={18} className="text-pacific-600" /> : <Circle size={18} />}
+                            <button onClick={() => toggleTask(task.id, !task.completed)} className="text-stone-400 hover:text-pacific">
+                                {task.completed ? <CheckCircle size={18} className="text-pacific" /> : <Circle size={18} />}
                             </button>
                             <span className={`text-sm ${task.completed ? 'line-through text-stone-400' : 'text-stone-700'}`}>
                                 {task.text}
@@ -61,3 +61,4 @@ export default function ChecklistWidget() {
         </div>
     );
 }
+

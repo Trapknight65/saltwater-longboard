@@ -89,13 +89,13 @@ export default function TourWidget() {
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-stone-200 p-6">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-pacific-800 flex items-center gap-2">
+                <h2 className="text-xl font-bold text-tide flex items-center gap-2">
                     <Ticket className="w-5 h-5" /> Tour Dates
                 </h2>
                 {!isAdding && !editingId && (
                     <button
                         onClick={() => setIsAdding(true)}
-                        className="p-2 rounded-full bg-pacific-100 text-pacific-600 hover:bg-pacific-200 transition-colors"
+                        className="p-2 rounded-full bg-pacific/10 text-pacific hover:bg-pacific-200 transition-colors"
                     >
                         <Plus className="w-5 h-5" />
                     </button>
@@ -147,7 +147,7 @@ export default function TourWidget() {
                     <div className="flex gap-2">
                         <button
                             onClick={editingId ? handleUpdate : handleAdd}
-                            className="flex-1 py-2 bg-pacific-600 text-white rounded-lg text-sm font-medium hover:bg-pacific-700 flex items-center justify-center gap-1"
+                            className="flex-1 py-2 bg-pacific text-white rounded-lg text-sm font-medium hover:bg-tide flex items-center justify-center gap-1"
                         >
                             <Check className="w-4 h-4" />
                             {editingId ? "Update" : "Add Show"}
@@ -173,9 +173,9 @@ export default function TourWidget() {
                             className="flex items-center justify-between p-3 bg-stone-50 rounded-lg group"
                         >
                             <div className="flex items-center gap-3">
-                                <div className="flex flex-col items-center justify-center w-12 h-12 bg-pacific-100 rounded-lg">
-                                    <Calendar className="w-4 h-4 text-pacific-600" />
-                                    <span className="text-xs font-bold text-pacific-700">{show.dateLabel.split(" ")[1] || show.dateLabel}</span>
+                                <div className="flex flex-col items-center justify-center w-12 h-12 bg-pacific/10 rounded-lg">
+                                    <Calendar className="w-4 h-4 text-pacific" />
+                                    <span className="text-xs font-bold text-tide">{show.dateLabel.split(" ")[1] || show.dateLabel}</span>
                                 </div>
                                 <div>
                                     <p className="font-medium text-stone-800">{show.venue}</p>
@@ -192,7 +192,7 @@ export default function TourWidget() {
                             <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <button
                                     onClick={() => handleEdit(show)}
-                                    className="p-1.5 text-stone-400 hover:text-pacific-600 hover:bg-pacific-50 rounded"
+                                    className="p-1.5 text-stone-400 hover:text-pacific hover:bg-pacific/10 rounded"
                                 >
                                     <Edit2 className="w-4 h-4" />
                                 </button>
@@ -210,3 +210,4 @@ export default function TourWidget() {
         </div>
     );
 }
+

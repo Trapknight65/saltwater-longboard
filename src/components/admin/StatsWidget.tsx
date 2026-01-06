@@ -37,8 +37,8 @@ export default function StatsWidget() {
     return (
         <div className="border border-stone-200 p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-semibold text-pacific-700 font-serif">Stats</h2>
-                <BarChart3 className="text-pacific-300" />
+                <h2 className="text-2xl font-semibold text-tide font-serif">Stats</h2>
+                <BarChart3 className="text-pacific/50" />
             </div>
 
             <div className="space-y-4 flex-1">
@@ -77,3 +77,4 @@ export default function StatsWidget() {
         </div>
     );
 }
+

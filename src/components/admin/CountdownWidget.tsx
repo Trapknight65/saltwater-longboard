@@ -33,7 +33,7 @@ export default function CountdownWidget() {
 
     return (
         <div className="border border-stone-200 p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
-            <h2 className="text-2xl font-semibold mb-4 text-pacific-700 font-serif">Releases</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-tide font-serif">Releases</h2>
 
             <form onSubmit={handleAdd} className="flex flex-col gap-2 mb-4 bg-stone-50 p-3 rounded">
                 <input
@@ -60,7 +60,7 @@ export default function CountdownWidget() {
                         <option value="Album">Album</option>
                     </select>
                 </div>
-                <button type="submit" className="p-2 bg-pacific-600 text-white rounded hover:bg-pacific-700 w-full flex items-center justify-center gap-2 text-sm">
+                <button type="submit" className="p-2 bg-pacific text-white rounded hover:bg-tide w-full flex items-center justify-center gap-2 text-sm">
                     <Plus size={16} /> Add Release
                 </button>
             </form>
@@ -85,3 +85,4 @@ export default function CountdownWidget() {
         </div>
     );
 }
+
